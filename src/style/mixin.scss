@@ -1,0 +1,14 @@
+@mixin font($f,$c) {
+    font-size: $f;
+    color: $c;
+}
+@mixin flex($display,$just-cont,$alg-itm) {
+    display: $display;
+    justify-content: $just-cont;
+    align-items: $alg-itm;
+}
+@mixin btn-mix($bgk,$color,$border) {
+    background: $bgk;
+    color: $color;
+    border: $border;
+}

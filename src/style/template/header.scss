@@ -1,0 +1,182 @@
+header{
+    background: linear-gradient($bgk-color_3,$bgk-color_4);
+    max-height: 90px;
+    .top-header__content{
+        display: flex;
+        align-items: center;
+        position: relative;
+        .top-header__column{
+            flex: 0 1 50%;
+            &:nth-child(2){
+                align-self: flex-start;
+                padding: 25px 0 0 0;
+                flex: 0 0 190px;
+                text-align: center;
+            }
+            .menu{
+                .menu__body{
+                    .menu__list{
+                        display: grid;
+                        list-style-type: none;
+                        margin: 0;
+                        grid-template-columns: 110px 130px 180px;
+                        li{
+                            .menu__link{
+                                font-family: "Play-Bold";
+                                font-size: 14px;
+                                color: $font-color_1;
+                                padding: 3px 22px;
+                                display: inline-flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-decoration: underline;
+                                transition: 0.3s ease-in-out;
+                                @media (min-width: $md3 + px){
+                                    &:hover{
+                                        background: $btn-color_3;
+                                        border-radius: 22px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .contacts-header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .contacts-header__column{
+                    padding: 0 32px;
+                    border-right: 1px solid $bgk-color_5;
+                    font-family: "Roboto-Regular";
+                    &:last-child{
+                        border-right: 0;
+                    }
+                    .contacts-header__item{
+                        background: url(../../img/phone-1.svg) no-repeat left;
+                        padding-left: 32px;
+                    }
+                    .contacts-header__icon{
+                        font-weight: 300;
+                        font-size: 12px;
+                        color: $font-color_1;
+                    }
+                    .contacts-header__phone{
+                        font-family: 'Roboto-Bold';
+                        color: $font-color_1;
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        &::before{
+            content: '';
+            display: block;
+            width: 225px;
+            height: 162px;
+            background: linear-gradient(#0fbace, #0fbace);
+            border-radius: 50%;
+            z-index: -1;
+            top: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+        }
+    }
+    .bottom-header__container{
+        display: flex;
+        height: 63px;
+        align-items: center;
+        .bottom-header__column{
+            flex: 0 1 50%;
+            .actions-header{
+                display: flex;
+                align-items: center;
+                list-style-type: none;
+                li{
+                    margin: 0 54px 0 0;
+                    // @media(max-width: $maxWidthContainer+px){
+                    //     margin: 0 54px / $maxWidthContainer * 100vw 0 0;
+                    // }
+                    .action-header{
+                        display: inline-block;
+                        line-height: 24px;
+                        color: $font-color_2;
+                        padding: 0 0 0 30px;
+                        text-decoration: none;
+                        span{
+                            border-bottom: 1px dotted;
+                            font-size: 14px;
+                        }
+                    }
+                    ._login{
+                        background: url(../../img/key.svg) no-repeat left;
+                    }
+                    ._reg{
+                        background: url(../../img/icon-2.svg) no-repeat left;
+                    }
+                    ._mail{
+                        background: url(../../img/mail.svg) no-repeat left;
+                    }
+                }
+            }
+            .bottom-header__info{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .info-header__column{
+                    .info-header__callback{
+                        font-family: "Roboto-Regular";
+                        color: $font-color_3;
+                        text-decoration: none;
+                        padding: 0 30px;
+                        display: inline-block;
+                        background: url(../../img/phone.svg) no-repeat left;
+                        span{
+                            border-bottom: 1px dotted;
+                            font-size: 14px;
+                        }
+                    }
+                    .info-header__shedule{
+                        display: inline-block;
+                        padding: 0 30px;
+                        background: url(../../img/calendar.svg) no-repeat left;
+                        p{
+                            font-family: "Roboto-Regular";
+                            font-weight: 300;
+                            font-size: 12px;
+                            margin: 0;
+                            color: $font-color_2;
+                            span{
+                                font-family: "Roboto-Bold"; 
+                            }
+                        }
+                    }
+                    .info-header__cart{
+                        display: inline-block;
+                        width: 43px;
+                        height: 43px;
+                        background: url(../../img/buy.svg) no-repeat center;
+                        position: relative;
+                        span{
+                            padding: 0 11px;
+                            border-radius: 20px;
+                            line-height: 25px;
+                            background-color: $btn-color_2;
+                            position: absolute;
+                            right: 0;
+                            font-size: 18px;
+                            font-weight: 700;
+                            text-decoration: none;
+                            color: $font-color_1;
+                            transform: translate(70%, 0px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
